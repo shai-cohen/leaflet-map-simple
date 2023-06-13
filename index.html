@@ -25,6 +25,30 @@
   <!-- Create the interactive map content with JavaScript (.js) -->
   <script>
 
+   <!--layers-->   
+  var osmMap = L.tileLayer.provider('OpenStreetMap.Mapnik');
+  var EspagnolMap = L.tileLayer.provider('MapTilesAPI.OSMEspagnol');
+  var StamenMap = L.tileLayer.provider('Stamen.Watercolor');
+  var TerrainMap = L.tileLayer.provider('Stamen.TerrainBackground');
+  var WorldTopoMap = L.tileLayer.provider('Esri.WorldTopoMap');
+  var ImageryMap = L.tileLayer.provider('Esri.WorldImagery');
+  var OceanMap = L.tileLayer.provider('Esri.OceanBasemap');
+  var OpenSeaMap = L.tileLayer.provider('OpenSeaMap');
+  var JusticeMap = L.tileLayer.provider('JusticeMap.income');
+
+
+  var baseMaps = {
+    OSM: osmMap,
+    'Stamen Watercolor': stamenMap,
+    'World Imagery': ImageryMap,
+    'Spanish': EspagnolMap,
+    'Terrain': TerrainBackground,
+    'World Topo': WorldTopoMap,
+    'Ocean': OceanBasemap,
+    'Ocean Sea': OpenSeaMap,
+    'Justice': JusticeMap
+}  
+     <!--end layers-->     
   /* Set up the initial map center and zoom level */
   var map = L.map('map', {
     center: [25.72126, -80.27542], // EDIT coordinates to re-center map
